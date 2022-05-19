@@ -1,1 +1,1 @@
-# xerolinux-mirrorlist
+# XeroLinux-Mirrorlist
