@@ -1,7 +1,7 @@
 # Maintainer: DarkXero <info@techxero.com>
 pkgname=xerolinux-mirrorlist
 _destname1="/"
-pkgver=0.1.2
+pkgver=0.1.3
 pkgrel=1
 pkgdesc="XeroLinux Configuration Tool"
 arch=('any')
