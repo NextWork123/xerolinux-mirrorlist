@@ -1,36 +1,18 @@
 #!/bin/bash
-#set -e
-##################################################################################################################
-# Written to be used on 64 bits computers
-# Author 	: 	DarkXero
-# Website 	: 	http://xerolinux.github.io
-##################################################################################################################
-# change a commit comment
-# git commit --amend -m "more info"
-# git push --force origin
 
-echo "Deleting the work folder if one exists"
+echo "Deleting the work folder if it exists"
 [ -d work ] && rm -rf work
 
-# Below command will backup everything inside the project folder
+# Backup everything inside the project folder
 git add --all .
 
-# Give a comment to the commit if you want
-echo "####################################"
-echo "Write your commit comment!"
-echo "####################################"
+# Prompt for a commit comment
+read -p "Write your commit comment: " input
 
-read input
-
-# Committing to the local repository with a message containing the time details and commit text
-
+# Commit to the local repository
 git commit -m "$input"
 
-# Push the local files to github
+# Push local files to GitHub
+git push -u origin main
 
-git push -f -u origin main
-
-
-echo "################################################################"
-echo "###################    Git Push Done      ######################"
-echo "################################################################"
+echo "Git Push Done"
